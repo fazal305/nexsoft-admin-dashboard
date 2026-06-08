@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexsoft Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay"></div>
+
+    <div class="dashboard-layout">
+
+        <!-- /* ===== REUSABLE COMPONENT: Sidebar ===== */ -->
+        <aside class="sidebar">
+
+            <!-- Sidebar Brand -->
+            <div class="sidebar-brand">
+                Nexsoft Admin
+            </div>
+
+            <!-- /* ===== REUSABLE COMPONENT: Sidebar Nav Link ===== */ -->
+            <nav class="sidebar-nav">
+
+                <a href="#" class="nav-link active">
+                    <span>📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>📈</span>
+                    <span>Analytics</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>👥</span>
+                    <span>Users</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>🛒</span>
+                    <span>Orders</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- /* ===== REUSABLE COMPONENT: Top Navbar ===== */ -->
+            <header class="top-navbar">
+
+                <div class="navbar-left">
+
+                    <button class="menu-toggle" aria-label="Open sidebar">
+                        ☰
+                    </button>
+
+                    <h1 class="page-title">
+                        Dashboard
+                    </h1>
+
+                </div>
+
+                <div class="navbar-right">
+
+                    <button class="theme-toggle" aria-label="Toggle dark and light mode">
+                        🌙
+                    </button>
+
+                    <div class="user-avatar">
+                        FA
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Dashboard Content -->
+            <section class="dashboard-content">
+
+                <!-- Stats Grid -->
+                <section class="stats-grid">
+
+                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
+                    <article class="stat-card">
+                        <div class="stat-icon">👥</div>
+
+                        <div class="stat-info">
+                            <p class="stat-label">Total Users</p>
+                            <h2 class="stat-value">12,480</h2>
+                            <p class="stat-trend positive">+12% this month</p>
+                        </div>
+                    </article>
+
+                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
+                    <article class="stat-card">
+                        <div class="stat-icon">💰</div>
+
+                        <div class="stat-info">
+                            <p class="stat-label">Revenue</p>
+                            <h2 class="stat-value">$48,290</h2>
+                            <p class="stat-trend positive">+8% this month</p>
+                        </div>
+                    </article>
+
+                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
+                    <article class="stat-card">
+                        <div class="stat-icon">🛒</div>
+
+                        <div class="stat-info">
+                            <p class="stat-label">Orders</p>
+                            <h2 class="stat-value">3,210</h2>
+                            <p class="stat-trend negative">-3% this month</p>
+                        </div>
+                    </article>
+
+                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
+                    <article class="stat-card">
+                        <div class="stat-icon">📈</div>
+
+                        <div class="stat-info">
+                            <p class="stat-label">Conversion Rate</p>
+                            <h2 class="stat-value">5.4%</h2>
+                            <p class="stat-trend positive">+1.2% this month</p>
+                        </div>
+                    </article>
+
+                </section>
+
+                <!-- Charts Grid -->
+                <section class="charts-grid">
+
+                    <!-- /* ===== REUSABLE COMPONENT: Chart Card ===== */ -->
+                    <article class="chart-card">
+                        <h2 class="chart-title">Monthly Revenue</h2>
+
+                        <div class="chart-wrapper">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </article>
+
+                    <!-- /* ===== REUSABLE COMPONENT: Chart Card ===== */ -->
+                    <article class="chart-card">
+                        <h2 class="chart-title">Weekly Orders</h2>
+
+                        <div class="chart-wrapper">
+                            <canvas id="ordersChart"></canvas>
+                        </div>
+                    </article>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
