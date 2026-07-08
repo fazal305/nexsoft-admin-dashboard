@@ -1,100 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive admin dashboard UI built with HTML, CSS, JavaScript, and Chart.js.">
+
     <title>Nexsoft Admin Dashboard</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- Mobile Overlay -->
-    <div class="sidebar-overlay"></div>
+<body>
+    <div class="sidebar-overlay" aria-hidden="true"></div>
 
     <div class="dashboard-layout">
-
-        <!-- /* ===== REUSABLE COMPONENT: Sidebar ===== */ -->
-        <aside class="sidebar">
-
-            <!-- Sidebar Brand -->
+        <aside class="sidebar" aria-label="Dashboard sidebar">
             <div class="sidebar-brand">
-                Nexsoft Admin
+                <span>Nexsoft Admin</span>
+                <small>Fazal Labs · WorkSuite</small>
             </div>
 
-            <!-- /* ===== REUSABLE COMPONENT: Sidebar Nav Link ===== */ -->
-            <nav class="sidebar-nav">
-
-                <a href="#" class="nav-link active">
+            <nav class="sidebar-nav" aria-label="Dashboard navigation">
+                <a href="#" class="nav-link active" data-title="Dashboard" aria-current="page">
                     <span>📊</span>
                     <span>Dashboard</span>
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" data-title="Analytics">
                     <span>📈</span>
                     <span>Analytics</span>
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" data-title="Users">
                     <span>👥</span>
                     <span>Users</span>
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" data-title="Orders">
                     <span>🛒</span>
                     <span>Orders</span>
                 </a>
 
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link" data-title="Settings">
                     <span>⚙️</span>
                     <span>Settings</span>
                 </a>
-
             </nav>
-
         </aside>
 
-        <!-- Main Content -->
         <main class="main-content">
-
-            <!-- /* ===== REUSABLE COMPONENT: Top Navbar ===== */ -->
             <header class="top-navbar">
-
                 <div class="navbar-left">
-
-                    <button class="menu-toggle" aria-label="Open sidebar">
+                    <button class="menu-toggle" type="button" aria-label="Open sidebar" aria-expanded="false">
                         ☰
                     </button>
 
-                    <h1 class="page-title">
-                        Dashboard
-                    </h1>
-
+                    <h1 class="page-title">Dashboard</h1>
                 </div>
 
                 <div class="navbar-right">
-
-                    <button class="theme-toggle" aria-label="Toggle dark and light mode">
+                    <button class="theme-toggle" type="button" aria-label="Switch to light mode">
                         🌙
                     </button>
 
-                    <div class="user-avatar">
+                    <div class="user-avatar" aria-label="Fazal Abbas profile avatar">
                         FA
                     </div>
-
                 </div>
-
             </header>
 
-            <!-- Dashboard Content -->
-            <section class="dashboard-content">
-
-                <!-- Stats Grid -->
-                <section class="stats-grid">
-
-                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
+            <section class="dashboard-content" aria-label="Dashboard overview">
+                <section class="stats-grid" aria-label="Dashboard statistics">
                     <article class="stat-card">
-                        <div class="stat-icon">👥</div>
+                        <div class="stat-icon" aria-hidden="true">👥</div>
 
                         <div class="stat-info">
                             <p class="stat-label">Total Users</p>
@@ -103,9 +82,8 @@
                         </div>
                     </article>
 
-                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
                     <article class="stat-card">
-                        <div class="stat-icon">💰</div>
+                        <div class="stat-icon" aria-hidden="true">💰</div>
 
                         <div class="stat-info">
                             <p class="stat-label">Revenue</p>
@@ -114,9 +92,8 @@
                         </div>
                     </article>
 
-                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
                     <article class="stat-card">
-                        <div class="stat-icon">🛒</div>
+                        <div class="stat-icon" aria-hidden="true">🛒</div>
 
                         <div class="stat-info">
                             <p class="stat-label">Orders</p>
@@ -125,9 +102,8 @@
                         </div>
                     </article>
 
-                    <!-- /* ===== REUSABLE COMPONENT: Stat Card ===== */ -->
                     <article class="stat-card">
-                        <div class="stat-icon">📈</div>
+                        <div class="stat-icon" aria-hidden="true">📈</div>
 
                         <div class="stat-info">
                             <p class="stat-label">Conversion Rate</p>
@@ -135,40 +111,31 @@
                             <p class="stat-trend positive">+1.2% this month</p>
                         </div>
                     </article>
-
                 </section>
 
-                <!-- Charts Grid -->
-                <section class="charts-grid">
-
-                    <!-- /* ===== REUSABLE COMPONENT: Chart Card ===== */ -->
+                <section class="charts-grid" aria-label="Dashboard charts">
                     <article class="chart-card">
                         <h2 class="chart-title">Monthly Revenue</h2>
 
                         <div class="chart-wrapper">
-                            <canvas id="revenueChart"></canvas>
+                            <canvas id="revenueChart" aria-label="Monthly revenue line chart"></canvas>
                         </div>
                     </article>
 
-                    <!-- /* ===== REUSABLE COMPONENT: Chart Card ===== */ -->
                     <article class="chart-card">
                         <h2 class="chart-title">Weekly Orders</h2>
 
                         <div class="chart-wrapper">
-                            <canvas id="ordersChart"></canvas>
+                            <canvas id="ordersChart" aria-label="Weekly orders bar chart"></canvas>
                         </div>
                     </article>
-
                 </section>
-
             </section>
-
         </main>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-
 </body>
+
 </html>
